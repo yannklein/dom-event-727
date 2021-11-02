@@ -1,12 +1,12 @@
-// console.log("Hi Batch #656");
+// console.log("Hi Batch #727!!!!");
 
 // ////////
 // Select DOM elements
 // ////////
 
-// with its ID (Sae)
-// const saeImg = document.querySelector("#sae");
-// console.log(saeImg);
+// with its ID (Mai)
+// const mai = document.querySelector("#mai");
+// console.log(mai);
 // with its tag type (h2)
 const h2 = document.querySelector("h2");
 // console.log(h2);
@@ -14,11 +14,9 @@ const h2 = document.querySelector("h2");
 const group = document.querySelector(".group");
 // console.log(group);
 // by nest selection (ul of the group)
-// const ul = group.querySelector("ul");
+const ul = group.querySelector("ul");
 // console.log(ul);
-
-// Shorten version
-// const ul = document.querySelector(".group ul");
+// document.querySelector(".group ul");
 
 // select multiple elements (all the card)
 const cards = document.querySelectorAll(".card");
@@ -28,27 +26,27 @@ const cards = document.querySelectorAll(".card");
 // Modify the DOM
 // ////////
 
-// add an HTML element (SafeSpaces FC 🗼)
-const ul = document.querySelector(".group ul");
-console.log(ul);
-ul.insertAdjacentHTML(
+// add an HTML element (Farmate FC)
+const ulElement = document.querySelector(".group ul");
+// console.log(ulElement);
+ulElement.insertAdjacentHTML(
   "beforeend",
-  "<li>SafeSpaces <em>FC</em> 🗼</li>"
+  "<li>Farmate <em>FC</em> 🐂</li>"
 );
 
-// same but more complex (add Pierre!!)
-const ikujiTeam = document.querySelector("#ikujitime ul");
-ikujiTeam.insertAdjacentHTML(
-  "beforeend",
+// same but more complex (add Ryota!!)
+const kikoeyTeam = document.querySelector("#kikoey ul");
+kikoeyTeam.insertAdjacentHTML(
+  "afterbegin",
   `<li>
-    <img src="https://avatars.githubusercontent.com/u/85116141?v=4" alt="" />
-    <p>Pierre</p>
+    <img src="https://avatars.githubusercontent.com/u/76512208?v=4" alt="">
+    <p>Ryota</p>
   </li>`
 );
 
 // change the element style (group background to green)
 // Careful! background-color => backgroundColor
-group.style.backgroundColor = "green";
+group.style.backgroundColor = "lightgreen";
 
 // add a class to the element (add text-white to group)
 // Careful! no DOT for classList
@@ -57,45 +55,44 @@ group.classList.add("text-white");
 // remove it
 group.classList.remove("text-white");
 
-
 // add/remove every 1sec
 setInterval(() => {
   // group.classList.toggle("text-white");
 }, 1000);
 
 // Read/Write for inputs (change the value in the email input)
-const email = document.querySelector("#email");
-console.log(email.value);
-email.value = "yann@me.com";
+const mailInput = document.querySelector("#email");
+// console.log(mailInput.value);
+mailInput.value = "yann@lewagon.com";
 
 // Read/Write the (inner) text and HTML content (FF RenRaku ⚽️ title)
-const renrakuCardH3 = document.querySelector("#ff-renraku h3");
-console.log(renrakuCardH3.innerText);
-console.log(renrakuCardH3.innerHTML);
+const ffTrainEQTitle = document.querySelector("#ff-trainEQ h3");
+console.log(ffTrainEQTitle.innerText);
+console.log(ffTrainEQTitle.innerHTML);
 
-renrakuCardH3.innerHTML = "Hello <strong>everyone</strong>!";
+ffTrainEQTitle.innerHTML = "Hello <em>everyone</em>";
 
 // ////////
 // Add event listeners
 // ////////
 
-// // 1. Select Sae's picture
-// const saeImg = document.querySelector("#sae");
+// 1. Select an element
+// const mai = document.querySelector("#mai");
 
-// // 2. Listen to a click
-// saeImg.addEventListener("click", (event) => {
-//   // 3. Modify the DOM (add the class selected)
-//   console.log(event);
+// // 2. Listen to s click
+// mai.addEventListener("click", (event) => {
+//   // 3. Change the DOM
+//   // event.currentTarget == the element that has been clicked
 //   event.currentTarget.classList.toggle("selected");
 // });
 
-// 1. Select all pictures
-const cardImgs = document.querySelectorAll(".card img");
-
-cardImgs.forEach((cardImg) => {
-  // 2. Listen to a click
-  cardImg.addEventListener("click", (event) => {
-    // 3. Modify the DOM
+// 1. Select everyone's picture!
+const imgs = document.querySelectorAll(".cards img");
+// 2. Iterate over them
+imgs.forEach((image) => {
+  // 3. Listen to a click on each
+  image.addEventListener("click", (event) => {
+    // 4. Toggle selected
     event.currentTarget.classList.toggle("selected");
   });
 });

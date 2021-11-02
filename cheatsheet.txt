@@ -1,6 +1,6 @@
-<li>Kyoro <em>FC</em> 🗼</li>
+<h3>Farmate <em>FC</em> 🐂</h3>
 
 <li>
-    <img src="https://avatars.githubusercontent.com/u/44258144?v=4" alt="">
-    <p>Simon</p>
+    <img src="https://avatars.githubusercontent.com/u/76512208?v=4" alt="">
+    <p>Ryota</p>
 </li>
